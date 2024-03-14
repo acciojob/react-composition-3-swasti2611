@@ -11,7 +11,7 @@ const App = () => {
             <h1>Hover over me</h1>
         </Tooltip>
         <Secondtooltip text={"Hover over me to see another tooltip"}>
-          <h3>This is another tooltip</h3>
+          <p>This is another tooltip</p>
         </Secondtooltip>
     </div>
   )

@@ -17,7 +17,7 @@ function handleLeave(){
     <div className='tooltip' onMouseOver={handleHover} onMouseLeave={handleLeave}>
        {isvisible && <div className="tooltiptext">
           <div>
-            <h2 className="tooltip">{text}</h2>
+            <p className="tooltip">{text}</p>
            </div>
           </div>
        }
