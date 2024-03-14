@@ -2,35 +2,30 @@ import React, { useState } from 'react'
 
 const Tooltip = ({text,children}) => {
    
-    const [isvisible,setIsvisible]=useState(false);
+    const [isHover, setIsHover] = useState(false);
 
-    function handleHover(){
-    setIsvisible(true)
-    }
-function handleLeave(){
-    setIsvisible(false)
-}
-
-  return (
-    <div>
-    
-    <div className='tooltip' onMouseOver={handleHover} onMouseLeave={handleLeave}>
-       {isvisible && <div className="tooltiptext">
-          <div>
-            <h2 className="tooltip">{text}</h2>
-           </div>
-          </div>
-       }
-       {children }
-       
-       
-       </div>
-    
+    const handleMouseEnter = () => {
+      setIsHover(true);
+    };
   
-      
-      
-    </div>
-  )
-}
+    const handleMouseLeave = () => {
+      setIsHover(false);
+    };
+  
+    return (
+      <div className="tooltip" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        {children}
+        {isHover && (
+          <div className="tooltiptext">
+            <div>
+              <p className="tooltip">{text}</p>
+            </div>
+          </div>
+        )}
+  
+          
+      </div>
+    );
+  };
 
 export default Tooltip
