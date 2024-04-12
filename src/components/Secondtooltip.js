@@ -17,7 +17,7 @@ function handleLeave(){
     <div className='tooltip' onMouseEnter={handleHover} onMouseLeave={handleLeave}>
        {isvisible && <div className="tooltiptext">
           <div>
-            <p className="tooltip">{text}</p>
+            <p className="tooltip" style={{marginTop:'10px'}}>{text}</p>
            </div>
           </div>
        }

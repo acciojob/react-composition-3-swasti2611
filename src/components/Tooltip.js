@@ -14,7 +14,7 @@ const Tooltip = ({text,children}) => {
   
     return (
       <div className="tooltip" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-        {children }
+       
         {isHover && (
           <div className="tooltiptext">
             <div>
@@ -22,6 +22,7 @@ const Tooltip = ({text,children}) => {
             </div>
           </div>
         )}
+        { children }
   
           
       </div>
