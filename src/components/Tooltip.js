@@ -5,7 +5,7 @@ const Tooltip = ({ text, children }) => {
   const [isHover, setIsHover] = useState(false);
 
   const handleMouseEnter = () => {
-    setIsHover(true);
+   // setIsHover(true);
   };
 
   const handleMouseLeave = () => {
